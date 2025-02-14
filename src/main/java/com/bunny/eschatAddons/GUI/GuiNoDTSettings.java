@@ -16,9 +16,16 @@ public class GuiNoDTSettings extends GuiScreen {
     public GuiNoDTSettings(GuiScreen parent) {
         this.parentScreen = parent;
     }
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        drawDefaultBackground();
+        super.drawScreen(mouseX, mouseY, partialTicks);
+    }
 
     @Override
     public void initGui() {
+        super.initGui();
+
         buttonList.clear();
 
         // Toggle Buttons

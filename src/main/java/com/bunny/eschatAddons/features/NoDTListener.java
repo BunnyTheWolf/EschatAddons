@@ -21,7 +21,7 @@ public class NoDTListener {
 
     public NoDTListener() {
         MinecraftForge.EVENT_BUS.register(this);
-    //    FMLCommonHandler.instance().bus().register(this); // Register tick event
+        //    FMLCommonHandler.instance().bus().register(this); // Register tick event
     }
 
     @SubscribeEvent

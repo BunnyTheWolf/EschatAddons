@@ -86,10 +86,10 @@ public class PartyCommands {
                 new Thread(() -> {
 
                     try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
                     int MaxRoll = roll;
 

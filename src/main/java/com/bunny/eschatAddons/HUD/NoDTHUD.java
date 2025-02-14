@@ -24,8 +24,9 @@ public class NoDTHUD {
 
         if (!ConfigHandler.NoDTHUD) return;
 
-        if (event.type == RenderGameOverlayEvent.ElementType.TEXT);
-        this.drawHUD(event.resolution);
+        if (event.type == RenderGameOverlayEvent.ElementType.TEXT) {
+            this.drawHUD(event.resolution);
+        }
     }
 
     private void drawHUD(ScaledResolution resolution){
@@ -40,7 +41,7 @@ public class NoDTHUD {
 
         int CurrentColor = ConfigHandler.NoDTEnabled ? DTDisabled : DTEnabled;
 
-        fr.drawString(text, ConfigHandler.NoDTHUD_X, ConfigHandler.NoDTHUD_Y, CurrentColor);
+        fr.drawStringWithShadow(text, ConfigHandler.NoDTHUD_X, ConfigHandler.NoDTHUD_Y, CurrentColor);
     }
 
 }
