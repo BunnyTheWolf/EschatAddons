@@ -16,7 +16,11 @@ public class GuiPartyCommands extends GuiScreen {
     private GuiButton PartyAllInvEnabled;
     private GuiButton PartyCoinflipEnabled;
     private GuiButton PartyRollsEnabled;
-
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        drawDefaultBackground();
+        super.drawScreen(mouseX, mouseY, partialTicks);
+    }
     public GuiPartyCommands(GuiScreen parent){
         this.parentScreen = parent;
     }

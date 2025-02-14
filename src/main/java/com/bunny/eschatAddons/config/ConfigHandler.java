@@ -25,6 +25,8 @@ public class ConfigHandler {
     public static boolean PartyAllInvEnabled;
     public static boolean PartyCoinFlipEnabled;
     public static boolean PartyRollsEnabled;
+    public static boolean DungeonFloorCommandsEnabled;
+    public static boolean RevTradeListenerEnabled;
 
 
     public static void loadConfig(File file) {
@@ -46,6 +48,9 @@ public class ConfigHandler {
         NoDTHUD_Y = config.get("NoDT", "Y_Position", 50, "The Y position of the NoDT HUD").getInt();
 
         // -----------------------------------------------------------------
+
+        DungeonFloorCommandsEnabled = config.get("Dungeon Floor Commands", "Enabled", true, "!f1-7, !m1-7 enabled?").getBoolean();
+        RevTradeListenerEnabled = config.get("Rev Trader Commands", "Enabled", false, "Send message when mini or boss spawns?").getBoolean();
 
         // Party Commands
 
@@ -74,6 +79,9 @@ public class ConfigHandler {
         config.get("NoDT", "HUD", NoDTHUD, "No Downtime Enabled/Disabled HUD").set(NoDTHUD);
         config.get("NoDT", "X_Position", NoDTHUD_X, "The X position of the NoDT HUD").set(NoDTHUD_X);
         config.get("NoDT", "Y_Position", NoDTHUD_Y, "The Y position of the NoDT HUD").set(NoDTHUD_Y);
+
+        config.get("Dungeon Floor Commands", "Enabled", true, "!f1-7, !m1-7 enabled?").set(DungeonFloorCommandsEnabled);
+        config.get("Rev Trader Commands", "Enabled", false, "Send message when mini or boss spawns?").set(RevTradeListenerEnabled);
 
         // ---------------------------------------------------------------------
 
